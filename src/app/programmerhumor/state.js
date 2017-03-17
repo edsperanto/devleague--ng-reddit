@@ -1,9 +1,9 @@
 const template = require('./template.html');
 
-export const AwwState = {
-	name: 'Aww',
-	url: '/aww',
+export const ProgHumorState = {
+	name: 'ProgHumor',
+	url: '/programmerhumor',
 	template,
-	controller: 'AwwCtrl',
-	controllerAs: 'Aww'
+	controller: 'ProgHumorCtrl',
+	controllerAs: 'ProgHumor'
 };

@@ -1,12 +1,13 @@
-import {AwwServiceName} from './service';
-export const AwwCtrl = ['$scope', AwwServiceName, class AwwCtrl {
-	constructor($scope, AwwService) {
-		this.title = "/r/Aww";
-		AwwService.getPosts()
+import {ProgHumorServiceName} from './service';
+export const ProgHumorCtrl = ['$scope', ProgHumorServiceName, class ProgHumorCtrl {
+	constructor($scope, ProgHumorService) {
+		this.title = "/r/programmerhumor";
+		ProgHumorService.getPosts()
 			.then(({data: {data: {children: posts}}}) => {
 				$scope.posts = posts;
 				console.log(posts);
 			})
 			.catch(console.log)
 			;
+	}
 }];
