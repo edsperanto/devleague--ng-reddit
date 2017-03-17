@@ -3,7 +3,7 @@ import * as uiRouter from 'angular-ui-router';
 
 import '../style/app.css';
 import {DefaultState, DefaultCtrl} from './default';
-import {AwwState, AwwCtrl} from './aww';
+import {AwwState, AwwCtrl, AwwService, AwwServiceName} from './aww';
 import './default/index';
 
 let app = () => {
@@ -34,6 +34,7 @@ angular.module(MODULE_NAME, ['ui.router'])
 		$state.go('Default');
 	})
   .directive('app', app)
+	.service(AwwServiceName, AwwService)
 	.controller('DefaultCtrl', DefaultCtrl)
 	.controller('AwwCtrl', AwwCtrl)
   // .controller('AppCtrl', AppCtrl)

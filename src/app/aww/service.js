@@ -1,4 +1,4 @@
-export const AwwServiceName = 'aww';
+export const AwwServiceName = 'AwwService';
 export const AwwService = [
 	'$http',
 	class AwwService {
@@ -6,6 +6,7 @@ export const AwwService = [
 		constructor($http) {
 			this.$http = $http;
 			this.endpoint = 'https://www.reddit.com/r/aww.json';
+			this.posts = 'testing';
 		}
 
 		getPosts() {
