@@ -20,3 +20,11 @@ footer {
   text-align: center;
   font-size: 0.8em;
 }
+
+.small {
+	max-width: 100px;
+}
+
+.large {
+	max-width: 200px;
+}

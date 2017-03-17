@@ -4,7 +4,9 @@ export const ProgHumorCtrl = ['$scope', ProgHumorServiceName, class ProgHumorCtr
 		this.title = "/r/programmerhumor";
 		ProgHumorService.getPosts()
 			.then(({data: {data: {children: posts}}}) => {
-				$scope.posts = posts;
+				$scope.posts = posts
+					.filter(({data: {preview}}) => preview)
+					.filter(({data: {thumbnail}}) => thumbnail != 'self' && thumbnail != 'default');
 				console.log(posts);
 			})
 			.catch(console.log)
