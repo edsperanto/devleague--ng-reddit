@@ -9,7 +9,7 @@ export const AwwCtrl = ['$scope', AwwServiceName, class AwwCtrl {
 					.filter(({data: {thumbnail}}) => thumbnail != 'self' && thumbnail != 'default')
 					.map(post => {
 						post.data.preview.images[0].source.url = 
-						post.data.preview.images[0].source.url.split('&amp;').join('&');
+							post.data.preview.images[0].source.url.split('&amp;').join('&');
 						return post;
 					});
 				console.log(posts);

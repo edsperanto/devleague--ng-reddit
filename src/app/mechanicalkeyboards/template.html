@@ -1,7 +1,7 @@
 <h1>{{ MechKey.title }}</h1>
 <ul>
-	<li ng-repeat="post in posts">
+	<li ng-repeat="post in posts" class="mech-key-list">
 		<p>{{post.data.title}}</p>
-		<img ng-src="{{ post.data.preview.images[0].source.url }}" alt="{{ post.data.title }}">
+		<img ng-click="expanded = !expanded" ng-class="expanded ? 'large' : 'small'" ng-src="{{ post.data.preview.images[0].source.url }}" alt="{{ post.data.title }}">
 	</li>
 </ul>
