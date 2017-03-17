@@ -1,0 +1,7 @@
+<h1>{{ MechKey.title }}</h1>
+<ul>
+	<li ng-repeat="post in posts">
+		<p>{{post.data.title}}</p>
+		<img ng-src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}">
+	</li>
+</ul>

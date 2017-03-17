@@ -4,6 +4,7 @@ import * as uiRouter from 'angular-ui-router';
 import '../style/app.css';
 import {DefaultState, DefaultCtrl} from './default';
 import {AwwState, AwwCtrl, AwwService, AwwServiceName} from './aww';
+import {MechKeyState, MechKeyCtrl, MechKeyService, MechKeyServiceName} from './mechanicalkeyboards';
 import './default/index';
 
 let app = () => {
@@ -28,6 +29,7 @@ angular.module(MODULE_NAME, ['ui.router'])
 		$stateProvider
 			.state(DefaultState.name, DefaultState)
 			.state(AwwState.name, AwwState)
+			.state(MechKeyState.name, MechKeyState)
 			;
 	})
 	.run(($state) => {
@@ -35,8 +37,10 @@ angular.module(MODULE_NAME, ['ui.router'])
 	})
   .directive('app', app)
 	.service(AwwServiceName, AwwService)
+	.service(MechKeyServiceName, MechKeyService)
 	.controller('DefaultCtrl', DefaultCtrl)
 	.controller('AwwCtrl', AwwCtrl)
+	.controller('MechKeyCtrl', MechKeyCtrl)
   // .controller('AppCtrl', AppCtrl)
 	;
 
