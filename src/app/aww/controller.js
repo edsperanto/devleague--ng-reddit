@@ -9,5 +9,4 @@ export const AwwCtrl = ['$scope', AwwServiceName, class AwwCtrl {
 			})
 			.catch(console.log)
 			;
-	}
 }];
