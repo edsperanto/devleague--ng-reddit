@@ -12,7 +12,6 @@ export const AwwCtrl = ['$scope', AwwServiceName, class AwwCtrl {
 							post.data.preview.images[0].source.url.split('&amp;').join('&');
 						return post;
 					});
-				console.log(posts);
 			})
 			.catch(console.log)
 			;
